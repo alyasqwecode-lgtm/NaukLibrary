@@ -1,0 +1,30 @@
+[
+  {
+    "id":         "kovaljova",
+    "name":       "Ковальова Ірина Федорівна",
+    "subtitle":   "Археолог, історик, доктор історичних наук",
+    "date":       "2021-07-17",
+    "thumbUrl":   "assets/img/authors/kovaljova/portrait.jpg"
+  },
+  {
+    "id":         "arshava",
+    "name":       "Аршава Ірина Федорівна",
+    "subtitle":   "Доктор психологічних наук, психотерапевт",
+    "date":       "2021-06-26",
+    "thumbUrl":   "assets/img/authors/arshava/portrait.jpg"
+  },
+  {
+    "id":         "ivanenko",
+    "name":       "Іваненко Валентин Васильович",
+    "subtitle":   "Доктор історичних наук",
+    "date":       "2021-09-24",
+    "thumbUrl":   "assets/img/authors/ivanenko/portrait.jpg"
+  },
+  {
+    "id":         "zelenska",
+    "name":       "Зеленська Любов Іванівна",
+    "subtitle":   "Доктор педагогічних наук, географ",
+    "date":       "2022-01-20",
+    "thumbUrl":   "assets/img/authors/zelenska/portrait.jpg"
+  }
+]

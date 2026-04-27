@@ -1,0 +1,32 @@
+{
+  "title":    "Засідання клубу «Жіноча академія»: мистецтво декупажу",
+  "subtitle": "Наше дозвілля",
+  "date":     "2018-04-27",
+
+  "sections": [
+    {
+      "type": "text",
+      "content": "27 квітня 2018 року в клубі «Жіноча академія» відбулося чергове засідання, присвячене мистецтву декупажу. Що таке декупаж? По суті декупаж – це аплікація, але аплікація особлива, покрита лаком, що виглядає як розпис. Зараз ця старовинна техніка переживає своє друге народження. Майстер-клас провела Ніна Олексіївна Кулик – професіонал цього мистецтва. Вона надала матеріали для творчості: безліч різноманітних серветок, спонжів та акрилових фарб. Учасники принесли найрізноманітніші заготівки: дощечки, скриньки, підставки для ножів, баночки для спецій. Для порівняння і натхнення Ніна Олексіївна показала свої роботи: пляшки, виконані в монохромній техніці, шкатулки, штучно зістарені кракелюрним лаком, розетки з двостороннім малюнком. Натхненні прикладом учасники клубу спробували «розписати» свої вироби і залишилися задоволені результатом. Зустріч пройшла в творчій атмосфері й доброму настрої.\n\nНа виставці, присвяченій засіданню клубу, було представлено близько 20 книг з техніки живопису та гармонії кольору."
+    },
+    {
+      "type":    "gallery",
+      "columns": 3,
+      "aspect":  "landscape",
+      "items": [
+        { "src": "assets/img/leisure/decoupage-2018/1.jpg",  "thumb": "assets/img/leisure/decoupage-2018/1.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/2.jpg",  "thumb": "assets/img/leisure/decoupage-2018/2.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/3.jpg",  "thumb": "assets/img/leisure/decoupage-2018/3.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/4.jpg",  "thumb": "assets/img/leisure/decoupage-2018/4.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/5.jpg",  "thumb": "assets/img/leisure/decoupage-2018/5.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/6.jpg",  "thumb": "assets/img/leisure/decoupage-2018/6.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/7.jpg",  "thumb": "assets/img/leisure/decoupage-2018/7.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/8.jpg",  "thumb": "assets/img/leisure/decoupage-2018/8.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/9.jpg",  "thumb": "assets/img/leisure/decoupage-2018/9.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/10.jpg", "thumb": "assets/img/leisure/decoupage-2018/10.jpg" },
+        { "src": "assets/img/leisure/decoupage-2018/11.jpg", "thumb": "assets/img/leisure/decoupage-2018/11.jpg" }
+      ]
+    }
+  ],
+
+  "compiledBy": ""
+}

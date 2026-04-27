@@ -1,0 +1,35 @@
+{
+  "_comment": "ШАБЛОН виставки. Скопіюйте цей файл, перейменуйте (напр. dara-korniy-2025.json) і заповніть поля. Поля, позначені // опц. — необов'язкові, можна залишити порожніми або видалити зовсім. Шлях для завантаження: assets/data/exhibitions/<ID>.json, де <ID> збігається з полем jsonFile у Google Sheets Exhibitions.",
+
+  "title":    "Назва виставки",
+  "subtitle": "Підзаголовок (опц.)",
+  "date":     "2025-04-28",
+
+  "heroImage":   "assets/img/exhibitions/<slug>/hero.jpg",
+
+  "epigraphs": [
+    { "text": "Цитата першого епіграфа.", "author": "Автор цитати" },
+    { "text": "Цитата другого епіграфа.", "author": "Автор цитати" }
+  ],
+
+  "authorBio":   "Біографія автора/тема виставки. Абзаци розділяйте порожніми рядками.\n\nДругий абзац.\n\nТретій абзац.",
+  "authorPhoto": "assets/img/exhibitions/<slug>/author.jpg",
+
+  "sections": [
+    {
+      "title": "I. Назва розділу (опц.)",
+      "intro": "Вступний текст до розділу (опц.).",
+      "books": [
+        {
+          "cover":       "assets/img/exhibitions/<slug>/book-1.jpg",
+          "author":      "Прізвище Ім'я",
+          "title":       "Назва книги",
+          "imprint":     "Місце: Видавництво, рік. — XXXс.",
+          "description": "Анотація книги."
+        }
+      ]
+    }
+  ],
+
+  "compiledBy": "Ім'я укладачки виставки"
+}

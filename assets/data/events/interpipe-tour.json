@@ -1,0 +1,35 @@
+{
+  "title":    "Колектив бібліотеки під час екскурсії. Завод Інтерпайп Сталь",
+  "subtitle": "Наше дозвілля",
+  "date":     "2015-11-30",
+
+  "sections": [
+    {
+      "type":    "gallery",
+      "columns": 4,
+      "aspect":  "landscape",
+      "items": [
+        { "src": "assets/img/leisure/interpipe-tour/1.jpg",  "thumb": "assets/img/leisure/interpipe-tour/1.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/2.jpg",  "thumb": "assets/img/leisure/interpipe-tour/2.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/3.jpg",  "thumb": "assets/img/leisure/interpipe-tour/3.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/4.jpg",  "thumb": "assets/img/leisure/interpipe-tour/4.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/5.jpg",  "thumb": "assets/img/leisure/interpipe-tour/5.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/6.jpg",  "thumb": "assets/img/leisure/interpipe-tour/6.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/7.jpg",  "thumb": "assets/img/leisure/interpipe-tour/7.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/8.jpg",  "thumb": "assets/img/leisure/interpipe-tour/8.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/9.jpg",  "thumb": "assets/img/leisure/interpipe-tour/9.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/10.jpg", "thumb": "assets/img/leisure/interpipe-tour/10.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/11.jpg", "thumb": "assets/img/leisure/interpipe-tour/11.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/12.jpg", "thumb": "assets/img/leisure/interpipe-tour/12.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/13.jpg", "thumb": "assets/img/leisure/interpipe-tour/13.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/14.jpg", "thumb": "assets/img/leisure/interpipe-tour/14.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/15.jpg", "thumb": "assets/img/leisure/interpipe-tour/15.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/16.jpg", "thumb": "assets/img/leisure/interpipe-tour/16.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/17.jpg", "thumb": "assets/img/leisure/interpipe-tour/17.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/18.jpg", "thumb": "assets/img/leisure/interpipe-tour/18.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/19.jpg", "thumb": "assets/img/leisure/interpipe-tour/19.jpg" },
+        { "src": "assets/img/leisure/interpipe-tour/20.jpg", "thumb": "assets/img/leisure/interpipe-tour/20.jpg" }
+      ]
+    }
+  ]
+}
