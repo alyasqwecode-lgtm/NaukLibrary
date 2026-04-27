@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Науково-методична діяльність | Наукова бібліотека ДНУ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script src="assets/js/tw-config.js"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="font-sans antialiased" data-i18n-title="page.nauk">
+  <div class="min-h-screen flex flex-col">
+
+    <header class="w-full shadow-md z-40 sticky top-0">
+      <div class="bg-dnublue-dark text-white border-b border-white/10">
+        <div class="mx-auto max-w-7xl px-4 py-1.5 sm:px-6 lg:px-8 flex items-center justify-between text-[12px] text-gray-100">
+          <div class="flex items-center gap-4">
+            <a href="index.html" class="bg-white p-1 rounded shrink-0">
+              <img src="assets/img/ui/logo.jpg" alt="Логотип" class="h-10 sm:h-12 w-auto object-contain" />
+            </a>
+            <div class="hidden sm:block leading-tight">
+              <div class="text-[15px] font-bold uppercase tracking-wide" data-i18n="header.name">Наукова бібліотека</div>
+              <div class="text-[11px] text-blue-200 uppercase tracking-wider" data-i18n="header.univ">Дніпровського національного університету</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="truncate hidden sm:inline opacity-90" data-i18n="header.contact">Всі питання і запити приймаємо тут: librarydnu@gmail.com</span>
+            <span class="truncate sm:hidden opacity-90" data-i18n="header.contact_short">librarydnu@gmail.com</span>
+            <div class="flex items-center gap-2 pl-2 border-l border-gray-300">
+              <a href="#" onclick="switchLang('uk');return false;" title="Українська" data-lang-btn="uk"><img src="https://flagcdn.com/w20/ua.png" width="18" alt="UKR"></a>
+              <a href="#" onclick="switchLang('en');return false;" title="English" data-lang-btn="en" class="opacity-40 hover:opacity-80 grayscale hover:grayscale-0 transition"><img src="https://flagcdn.com/w20/gb.png" width="18" alt="ENG"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-dnublue-light text-white relative">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+
+          <nav class="hidden lg:block" aria-label="Головне меню">
+            <ul class="flex text-[13.5px] font-semibold text-white -ml-3">
+
+              <li class="menu-group relative">
+                <a href="#" class="flex justify-between items-center py-3 px-3 hover:bg-white/10 transition-colors">
+                  <span data-i18n="nav.about">Про бібліотеку</span>
+                  <svg class="h-4 w-4 ml-1 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <ul class="menu-dropdown w-full lg:w-64 bg-white border-t-2 border-dnublue-dark shadow-lg text-gray-700 lg:py-1.5">
+                  <li><a href="history.html" class="nav-link-desktop" data-i18n="nav.history">Історія бібліотеки</a></li>
+                  <li><a href="rules.html" class="nav-link-desktop" data-i18n="nav.rules">Правила користування</a></li>
+                  <li><a href="founds.html" class="nav-link-desktop" data-i18n="nav.funds">Фонди наукової бібліотеки ДНУ</a></li>
+                  <li><a href="nauk.html" class="nav-link-desktop" data-i18n="nav.nauk">Науково-методична діяльність</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-group relative">
+                <a href="#" class="flex justify-between items-center py-3 px-3 hover:bg-white/10 transition-colors">
+                  <span data-i18n="nav.students">Студентам</span>
+                  <svg class="h-4 w-4 ml-1 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <ul class="menu-dropdown w-full lg:w-64 bg-white border-t-2 border-dnublue-dark shadow-lg text-gray-700 lg:py-1.5">
+                  <li><a href="https://www.dnu.dp.ua/docs/ndc/2025/Akadem_dobrochesnist/Polozhennya_Akadem_dobrochesnist'-2020.pdf" target="_blank" class="nav-link-desktop" data-i18n="nav.integrity">Положення про академ. доброчесність</a></li>
+                  <li><a href="https://www.dnu.dp.ua/view/unicheck" target="_blank" class="nav-link-desktop" data-i18n="nav.plagiarism">Антиплагіат (StrikePlagiarism)</a></li>
+                  <li><a href="eks3d.html" class="nav-link-desktop" data-i18n="nav.tour3d">Віртуальна екскурсія 3D</a></li>
+                  <li><a href="https://library.dnu.dp.ua/doc/library_20251015.pdf" target="_blank" class="nav-link-desktop" data-i18n="nav.liblnk">Бібліотека</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-group relative">
+                <a href="#" class="flex justify-between items-center py-3 px-3 hover:bg-white/10 transition-colors">
+                  <span data-i18n="nav.researchers">Науковцям</span>
+                  <svg class="h-4 w-4 ml-1 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <ul class="menu-dropdown w-full lg:w-64 bg-white border-t-2 border-dnublue-dark shadow-lg text-gray-700 lg:py-1.5">
+                  <li><a href="https://library.dnu.dp.ua/doc/naukovzi_20251212_ai/20251208_Presentation_AI_and_fictional_sources.pdf" target="_blank" class="nav-link-desktop" data-i18n="nav.ai">Штучний інтелект і вигадані джерела</a></li>
+                  <li><a href="https://library.dnu.dp.ua/doc/naukovzi_20251204/lyst-mon-1-19894-24-vid-25-10-2024.pdf" target="_blank" class="nav-link-desktop" data-i18n="nav.sources">Про використання джерел інформації</a></li>
+                  <li><a href="https://library.dnu.dp.ua/doc/naukovzi_20251204/Open_science_2025.pdf" target="_blank" class="nav-link-desktop" data-i18n="nav.openscience">Політика відкритої науки</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-group relative">
+                <a href="#" class="flex justify-between items-center py-3 px-3 hover:bg-white/10 transition-colors">
+                  <span data-i18n="nav.resources">Ресурси</span>
+                  <svg class="h-4 w-4 ml-1 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <ul class="menu-dropdown w-full lg:w-64 bg-white border-t-2 border-dnublue-dark shadow-lg text-gray-700 lg:py-1.5">
+                  <li><a href="http://lib.dnu.dp.ua" target="_blank" class="nav-link-desktop" data-i18n="nav.catalog">Електронний каталог</a></li>
+                  <li><a href="https://repository.dnu.dp.ua" target="_blank" class="nav-link-desktop" data-i18n="nav.repository">Репозиторій ДНУ</a></li>
+                  <li><a href="vudanyaDNU.html" class="nav-link-desktop" data-i18n="nav.publdnu">Видання ДНУ</a></li>
+                  <li><a href="elresukr.html" class="nav-link-desktop" data-i18n="nav.elresukr">Електронні ресурси України</a></li>
+                  <li><a href="elressvit.html" class="nav-link-desktop" data-i18n="nav.elressvit">Електронні ресурси світу</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-group relative">
+                <a href="#" class="flex justify-between items-center py-3 px-3 hover:bg-white/10 transition-colors">
+                  <span data-i18n="nav.life">Життя бібліотеки</span>
+                  <svg class="h-4 w-4 ml-1 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+                <ul class="menu-dropdown w-full lg:w-64 bg-white border-t-2 border-dnublue-dark shadow-lg text-gray-700 lg:py-1.5 right-0 left-auto">
+                  <li><a href="news.html" class="nav-link-desktop" data-i18n="nav.news">Новини</a></li>
+                  <li><a href="newnadhod.html" class="nav-link-desktop" data-i18n="nav.arrivals">Нові надходження</a></li>
+                  <li><a href="virt.html" class="nav-link-desktop" data-i18n="nav.exhibitions">Віртуальні виставки</a></li>
+                  <li><a href="newsfromlib.html" class="nav-link-desktop" data-i18n="nav.newsfromlib">Новини з книгосховища</a></li>
+                  <li><a href="leisure.html" class="nav-link-desktop" data-i18n="nav.leisure">Наше дозвілля</a></li>
+                  <li><a href="donors.html" class="nav-link-desktop" data-i18n="nav.donors">Дарувальники</a></li>
+                  <li><a href="libnewspaper.html" class="nav-link-desktop" data-i18n="nav.libnewspaper">Бібліотека у ЗМІ</a></li>
+                </ul>
+              </li>
+
+              <li><a href="contact.html" class="nav-direct-desktop"><span data-i18n="nav.contacts">Контакти</span></a></li>
+            </ul>
+          </nav>
+
+          <div class="hidden lg:flex items-center gap-5">
+            <a href="https://www.facebook.com/NBDNU" target="_blank" class="text-white hover:text-white/70 transition-opacity" aria-label="Facebook">
+              <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/naukova_biblioteka_dnu/" target="_blank" class="text-white hover:text-white/70 transition-opacity" aria-label="Instagram">
+              <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/c/lIBRARYDnu" target="_blank" class="text-white hover:text-white/70 transition-opacity" aria-label="YouTube">
+              <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+
+          <!-- ИСПРАВЛЕНО: убран flex-1 -->
+          <div class="flex lg:hidden items-center justify-between w-full py-1.5">
+            <div class="flex items-center gap-5 pl-1">
+              <a href="https://www.facebook.com/NBDNU" target="_blank" class="text-white hover:text-white/70 transition-opacity" aria-label="Facebook">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/naukova_biblioteka_dnu/" target="_blank" class="text-white hover:text-white/70 transition-opacity" aria-label="Instagram">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/c/lIBRARYDnu" target="_blank" class="text-white hover:text-white/70 transition-opacity" aria-label="YouTube">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+            </div>
+            <button id="mobile-menu-btn" class="text-white p-1.5 -mr-1.5 rounded hover:bg-white/10 focus:outline-none transition-colors" aria-label="Відкрити меню">
+              <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <nav id="mobile-menu" class="hidden lg:hidden bg-white text-gray-800 shadow-xl border-t border-gray-200 absolute w-full z-50 left-0">
+        <ul class="flex flex-col text-[14.5px] font-bold">
+          
+          <li class="menu-group border-b border-gray-100">
+            <a href="#" class="flex justify-between items-center py-3.5 px-5 hover:bg-indigo-50 hover:text-dnublue-dark transition-colors">
+              <span data-i18n="nav.about">Про бібліотеку</span>
+              <svg class="h-4 w-4 ml-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <ul class="menu-dropdown bg-slate-50 border-l-4 border-dnublue-light">
+              <li><a href="history.html" class="nav-link-mobile" data-i18n="nav.history">Історія бібліотеки</a></li>
+              <li><a href="rules.html" class="nav-link-mobile" data-i18n="nav.rules">Правила користування</a></li>
+              <li><a href="founds.html" class="nav-link-mobile" data-i18n="nav.funds">Фонди наукової бібліотеки ДНУ</a></li>
+              <li><a href="nauk.html" class="nav-link-mobile" data-i18n="nav.nauk">Науково-методична діяльність</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-group border-b border-gray-100">
+            <a href="#" class="flex justify-between items-center py-3.5 px-5 hover:bg-indigo-50 hover:text-dnublue-dark transition-colors">
+              <span data-i18n="nav.students">Студентам</span>
+              <svg class="h-4 w-4 ml-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <ul class="menu-dropdown bg-slate-50 border-l-4 border-dnublue-light">
+              <li><a href="https://www.dnu.dp.ua/docs/ndc/2025/Akadem_dobrochesnist/Polozhennya_Akadem_dobrochesnist'-2020.pdf" target="_blank" class="nav-link-mobile" data-i18n="nav.integrity">Положення про академ. доброчесність</a></li>
+              <li><a href="https://www.dnu.dp.ua/view/unicheck" target="_blank" class="nav-link-mobile" data-i18n="nav.plagiarism">Антиплагіат (StrikePlagiarism)</a></li>
+              <li><a href="eks3d.html" class="nav-link-mobile" data-i18n="nav.tour3d">Віртуальна екскурсія 3D</a></li>
+              <li><a href="https://library.dnu.dp.ua/doc/library_20251015.pdf" target="_blank" class="nav-link-mobile" data-i18n="nav.liblnk">Бібліотека</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-group border-b border-gray-100">
+            <a href="#" class="flex justify-between items-center py-3.5 px-5 hover:bg-indigo-50 hover:text-dnublue-dark transition-colors">
+              <span data-i18n="nav.researchers">Науковцям</span>
+              <svg class="h-4 w-4 ml-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <ul class="menu-dropdown bg-slate-50 border-l-4 border-dnublue-light">
+              <li><a href="https://library.dnu.dp.ua/doc/naukovzi_20251212_ai/20251208_Presentation_AI_and_fictional_sources.pdf" target="_blank" class="nav-link-mobile" data-i18n="nav.ai">Штучний інтелект і вигадані джерела</a></li>
+              <li><a href="https://library.dnu.dp.ua/doc/naukovzi_20251204/lyst-mon-1-19894-24-vid-25-10-2024.pdf" target="_blank" class="nav-link-mobile" data-i18n="nav.sources">Про використання джерел інформації</a></li>
+              <li><a href="https://library.dnu.dp.ua/doc/naukovzi_20251204/Open_science_2025.pdf" target="_blank" class="nav-link-mobile" data-i18n="nav.openscience">Політика відкритої науки</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-group border-b border-gray-100">
+            <a href="#" class="flex justify-between items-center py-3.5 px-5 hover:bg-indigo-50 hover:text-dnublue-dark transition-colors">
+              <span data-i18n="nav.resources">Ресурси</span>
+              <svg class="h-4 w-4 ml-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <ul class="menu-dropdown bg-slate-50 border-l-4 border-dnublue-light">
+              <li><a href="http://lib.dnu.dp.ua" target="_blank" class="nav-link-mobile" data-i18n="nav.catalog">Електронний каталог</a></li>
+              <li><a href="https://repository.dnu.dp.ua" target="_blank" class="nav-link-mobile" data-i18n="nav.repository">Репозиторій ДНУ</a></li>
+              <li><a href="vudanyaDNU.html" class="nav-link-mobile" data-i18n="nav.publdnu">Видання ДНУ</a></li>
+              <li><a href="elresukr.html" class="nav-link-mobile" data-i18n="nav.elresukr">Електронні ресурси України</a></li>
+              <li><a href="elressvit.html" class="nav-link-mobile" data-i18n="nav.elressvit">Електронні ресурси світу</a></li>
+            </ul>
+          </li>
+
+          <li class="menu-group border-b border-gray-100">
+            <a href="#" class="flex justify-between items-center py-3.5 px-5 hover:bg-indigo-50 hover:text-dnublue-dark transition-colors">
+              <span data-i18n="nav.life">Життя бібліотеки</span>
+              <svg class="h-4 w-4 ml-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <ul class="menu-dropdown bg-slate-50 border-l-4 border-dnublue-light">
+              <li><a href="news.html" class="nav-link-desktop" data-i18n="nav.news">Новини</a></li>
+			  <li><a href="newnadhod.html" class="nav-link-mobile" data-i18n="nav.arrivals">Нові надходження</a></li>
+              <li><a href="virt.html" class="nav-link-mobile" data-i18n="nav.exhibitions">Віртуальні виставки</a></li>
+              <li><a href="newsfromlib.html" class="nav-link-mobile" data-i18n="nav.newsfromlib">Новини з книгосховища</a></li>
+              <li><a href="leisure.html" class="nav-link-mobile" data-i18n="nav.leisure">Наше дозвілля</a></li>
+              <li><a href="donors.html" class="nav-link-mobile" data-i18n="nav.donors">Дарувальники</a></li>
+              <li><a href="libnewspaper.html" class="nav-link-mobile" data-i18n="nav.libnewspaper">Бібліотека у ЗМІ</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html" class="nav-direct-mobile">Контакти</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="bg-white border-b border-gray-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 page-hero">
+        <nav class="text-[12px] text-gray-500" aria-label="Breadcrumb">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a class="hover:text-dnublue-dark transition-colors" href="index.html">Головна</a></li>
+            <li class="text-gray-300">/</li>
+            <li><span class="text-gray-600">Про бібліотеку</span></li>
+            <li class="text-gray-300">/</li>
+            <li><span class="text-dnublue-dark font-semibold">Науково-методична діяльність</span></li>
+          </ol>
+        </nav>
+
+        <div class="mt-3 flex flex-col gap-3">
+          <h1 class="page-title">
+            Науково-методична діяльність
+          </h1>
+          <div class="page-divider"></div>
+          <p class="page-subtitle">
+            Документи, звіти та статистичні показники роботи бібліотек ЗВО Дніпропетровської області.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="flex-grow mb-16">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-10">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- 2025 -->
+          <div class="doc-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full">
+            <div class="text-[22px] font-bold text-textmain mb-4 border-b border-gray-100 pb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2025
+            </div>
+            <ul class="space-y-3.5 flex-grow">
+              <li class="group">
+                <a href="#" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Основні статистичні показники роботи бібліотек ЗВО Дніпропетровської області
+                  </span>
+                </a>
+              </li>
+              <li class="group">
+                <a href="#" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Пояснювальна записка до статистичних показників роботи бібліотек ЗВО Дніпропетровської області за 2025р.
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2024 -->
+          <div class="doc-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full">
+            <div class="text-[22px] font-bold text-textmain mb-4 border-b border-gray-100 pb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2024
+            </div>
+            <ul class="space-y-3.5 flex-grow">
+              <li class="group">
+                <a href="http://library.dnu.dp.ua/doc/2024A_Summary_table_of_the_Dnipropetrovsk_region_higher_educational_education.xls" target="_blank" rel="noopener" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Основні статистичні показники роботи бібліотек ЗВО Дніпропетровської області
+                  </span>
+                </a>
+              </li>
+              <li class="group">
+                <a href="http://library.dnu.dp.ua/doc/2024_Explanatory_note.pdf" target="_blank" rel="noopener" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Пояснювальна записка до статистичних показників роботи бібліотек ЗВО Дніпропетровської області за 2024р.
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2023 -->
+          <div class="doc-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full">
+            <div class="text-[22px] font-bold text-textmain mb-4 border-b border-gray-100 pb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2023
+            </div>
+            <ul class="space-y-3.5 flex-grow">
+              <li class="group">
+                <a href="http://library.dnu.dp.ua/zv_tab2023.xls" target="_blank" rel="noopener" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Основні статистичні показники роботи бібліотек ЗВО Дніпропетровської області
+                  </span>
+                </a>
+              </li>
+              <li class="group">
+                <a href="http://library.dnu.dp.ua/pz2023.docx" target="_blank" rel="noopener" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Пояснювальна записка до статистичних показників роботи бібліотек ЗВО Дніпропетровської області за 2023р.
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2022 -->
+          <div class="doc-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full">
+            <div class="text-[22px] font-bold text-textmain mb-4 border-b border-gray-100 pb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2022
+            </div>
+            <ul class="space-y-3.5 flex-grow">
+              <li class="group">
+                <a href="http://library.dnu.dp.ua/zv_tab2022.xls" target="_blank" rel="noopener" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Основні статистичні показники роботи бібліотек ЗВО Дніпропетровської області
+                  </span>
+                </a>
+              </li>
+              <li class="group">
+                <a href="http://library.dnu.dp.ua/pz2022.rtf" target="_blank" rel="noopener" class="flex items-start gap-2.5">
+                  <svg class="w-[18px] h-[18px] text-iconcolor shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                  <span class="text-[13.5px] text-textmain font-medium leading-snug group-hover:text-dnublue-dark transition-colors">
+                    Пояснювальна записка до статистичних показників роботи бібліотек ЗВО Дніпропетровської області за 2022 р.
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Архівні картки 2021-2018: вся картка клікабельна -->
+          <a href="nauk-detail.html?id=2021" class="doc-card archive-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full justify-center hover:shadow-md hover:border-dnublue-light transition-all group">
+            <div class="text-[22px] font-bold text-textmain mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2021
+            </div>
+            <span class="inline-flex items-center gap-2 text-[13.5px] text-linkblue group-hover:text-blue-800 transition-colors mt-2">
+              Переглянути архів документів за 2021 рік
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </a>
+
+          <a href="nauk-detail.html?id=2020" class="doc-card archive-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full justify-center hover:shadow-md hover:border-dnublue-light transition-all group">
+            <div class="text-[22px] font-bold text-textmain mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2020
+            </div>
+            <span class="inline-flex items-center gap-2 text-[13.5px] text-linkblue group-hover:text-blue-800 transition-colors mt-2">
+              Переглянути архів документів за 2020 рік
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </a>
+
+          <a href="nauk-detail.html?id=2019" class="doc-card archive-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full justify-center hover:shadow-md hover:border-dnublue-light transition-all group">
+            <div class="text-[22px] font-bold text-textmain mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2019
+            </div>
+            <span class="inline-flex items-center gap-2 text-[13.5px] text-linkblue group-hover:text-blue-800 transition-colors mt-2">
+              Переглянути архів документів за 2019 рік
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </a>
+
+          <a href="nauk-detail.html?id=2018" class="doc-card archive-card bg-cardbg rounded border border-cardborder shadow-sm p-6 flex flex-col h-full justify-center hover:shadow-md hover:border-dnublue-light transition-all group">
+            <div class="text-[22px] font-bold text-textmain mb-2 flex items-center gap-2">
+              <svg class="w-5 h-5 text-iconcolor" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              2018
+            </div>
+            <span class="inline-flex items-center gap-2 text-[13.5px] text-linkblue group-hover:text-blue-800 transition-colors mt-2">
+              Переглянути архів документів за 2018 рік
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="bg-dnublue-dark text-slate-300 border-t-4 border-dnublue-light mt-auto">
+      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div>
+            <h3 class="text-white font-bold mb-5 text-sm uppercase tracking-wider">Наші контакти</h3>
+            <ul class="text-[14px] space-y-3.5 text-slate-400">
+              <li><strong class="text-white">Адреса:</strong> 49107, Дніпро, вул. Ніла Армстронга, 8</li>
+              <li><strong class="text-white">Телефон:</strong> (+38-056)-766-49-62</li>
+              <li><strong class="text-white">Прохідна:</strong> (+38-056)-766-49-63</li>
+              <li><strong class="text-white">Email:</strong> <a href="mailto:librarydnu@gmail.com" class="text-blue-300 hover:text-white underline transition-colors">librarydnu@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <div class="h-[180px] w-full bg-slate-800 rounded-md overflow-hidden border border-slate-700">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2647.1981838031743!2d35.0366955!3d48.433536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe34bb36b8929%3A0x6cde9d6d9e7cf0b6!2z0J3QsNGD0YfQvdCw0Y8g0JHQuNCx0LvQuNC-0YLQtdC60LAg0JTQndCj!5e0!3m2!1sru!2sua!4v1776429342271!5m2!1sru!2sua"
+              width="100%" height="100%" style="border:0;"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-[12px] text-slate-400">© Наукова бібліотека ДНУ ім. О. Гончара. Всі права захищено.</p>
+          <div class="flex items-center gap-5">
+            <a href="https://www.facebook.com/NBDNU" target="_blank" class="text-dnublue-light hover:text-white transition-colors" aria-label="Facebook">
+              <svg fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/naukova_biblioteka_dnu/" target="_blank" class="text-dnublue-light hover:text-white transition-colors" aria-label="Instagram">
+              <svg fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+			<a href="https://www.youtube.com/c/lIBRARYDnu" target="_blank" class="text-dnublue-light hover:text-white transition-colors" aria-label="YouTube">
+			  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+			</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
