@@ -1,0 +1,473 @@
+/* ==========================================================================
+   Наукова бібліотека ДНУ — глобальні стилі (style.css)
+   --------------------------------------------------------------------------
+   1.  База (html/body)
+   2.  Навігаційне меню + класи-помічники nav-link-*, nav-direct-*
+   3.  Підсвітка активної сторінки (працює разом з main.js)
+   4.  Доступність (skip-link, focus-visible)
+   5.  Типографіка статей (article-body)
+   6.  Шапка сторінки під хлібними крихтами (page-hero/title/subtitle)
+   7.  Картки та анімації
+   8.  Кнопки "Читати далі"
+   9.  Skeleton завантаження
+   10. Sticky-зміст TOC
+   ========================================================================== */
+
+/* ── 1. База ────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+body {
+  background: #f4f6f9;
+  color: #1f2937;
+}
+
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+.text-balance { text-wrap: balance; }
+
+
+/* ── 2. Навігаційне меню ────────────────────────────────────────────────── */
+
+/* Випадаючі списки */
+@media (min-width: 1024px) {
+  .menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+  }
+  .menu-group:hover .menu-dropdown { display: block; }
+  .menu-dropdown a:hover { background-color: #eef2ff; color: #1A237E; }
+}
+@media (max-width: 1023px) {
+  .menu-dropdown {
+    display: none;
+    padding-left: 1rem;
+    background: rgba(0,0,0,.12);
+  }
+  .menu-group.active .menu-dropdown { display: block; }
+  .menu-dropdown a:hover { color: #3F51B5; }
+}
+
+/* Класи-помічники для пунктів меню.
+   Замінюють довгі набори Tailwind-класів у кожному <a>.
+   Активний пункт підсвічує main.js через .nav-item-active / .nav-group-active. */
+
+/* Desktop dropdown */
+.nav-link-desktop {
+  display: block;
+  padding: 0.625rem 1rem;
+  font-size: 13px;
+}
+
+/* Mobile dropdown */
+.nav-link-mobile {
+  display: block;
+  padding: 0.75rem 1.25rem 0.75rem 1.5rem;
+  font-size: 13.5px;
+  color: #4b5563;
+  transition: background-color .15s ease, color .15s ease;
+}
+.nav-link-mobile:hover {
+  color: #1A237E;
+  background-color: #e0e7ff;
+}
+
+/* Прямі лінки (Контакти) */
+.nav-direct-desktop {
+  display: block;
+  padding: 0.75rem;
+  transition: background-color .15s ease;
+}
+.nav-direct-desktop:hover { background-color: rgba(255,255,255,.1); }
+
+.nav-direct-mobile {
+  display: block;
+  padding: 0.875rem 1.25rem 1.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  transition: background-color .15s ease, color .15s ease;
+}
+.nav-direct-mobile:hover {
+  color: #1A237E;
+  background-color: #eef2ff;
+}
+
+
+/* ── 3. Підсвітка активної сторінки ─────────────────────────────────────── */
+
+.nav-group-active > a {
+  background: rgba(255,255,255,.15) !important;
+  position: relative;
+}
+.nav-group-active > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: #fff;
+}
+
+.nav-item-active {
+  background-color: #eef2ff !important;
+  color: #1A237E !important;
+  font-weight: 700;
+}
+
+@media (max-width: 1023px) {
+  .nav-group-active > a {
+    background: #eef2ff !important;
+    color: #1A237E !important;
+  }
+  .nav-group-active > a::after { display: none; }
+}
+
+
+/* ── 4. Доступність ─────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  left: 12px; top: 12px;
+  transform: translateY(-220%);
+  transition: transform .15s ease;
+  z-index: 1000;
+}
+.skip-link:focus { transform: translateY(0); }
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid rgba(26,35,126,.35);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+
+/* ── 5. Типографіка статей ──────────────────────────────────────────────── */
+.article-wrap { text-rendering: optimizeLegibility; }
+
+.article-body {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1f2937;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .article-body {
+    font-size: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+}
+
+.article-body p { margin-top: 1rem; }
+.article-body p:first-child { margin-top: 0; }
+
+.article-body h2 {
+  margin-top: 2.25rem;
+  margin-bottom: .75rem;
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #111827;
+  scroll-margin-top: 110px;
+  text-align: left;
+}
+.article-body > h2:first-child { margin-top: 0; }
+
+.article-body ul {
+  list-style: disc;
+  padding-left: 1.6rem;
+  margin: .6rem 0 1.1rem;
+}
+.article-body li { margin: .25rem 0; }
+
+.article-body hr {
+  margin: 2.25rem 0;
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* Доповнення для сторінки-деталі новини */
+.article-body img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1);
+}
+.article-body li        { margin-bottom: 0.5rem; }
+.article-body a         { color: #3F51B5; text-decoration: underline; font-weight: 600; }
+.article-body a:hover   { color: #1A237E; }
+
+/* Цитатні та інфо-блоки (history.html: .quote-block, rules.html: .info-block) */
+.quote-block,
+.info-block {
+  background: #f8fafc;
+  border-left: 3px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+/* Hover-картки (contact, vudanyaDNU) */
+.contact-card,
+.pub-card {
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.contact-card:hover { box-shadow: 0 6px 20px rgba(30,58,138,.05); transform: translateY(-2px); }
+.pub-card:hover     { box-shadow: 0 8px 25px rgba(30,58,138,.07); transform: translateY(-2px); }
+
+/* Картка донорів (донори мають timeline з точкою) */
+.timeline-item { transition: all 0.3s ease; }
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.3);
+  background-color: #1A237E;
+}
+
+.donor-content img {
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.donor-content a {
+  color: #3F51B5;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.donor-content a:hover { color: #1A237E; }
+
+
+/* ── 6. Шапка сторінки під хлібними крихтами ───────────────────────────── */
+.page-hero {
+  padding-top: 1.75rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 640px) {
+  .page-hero {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.page-title {
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: #111827;
+  font-size: 1.875rem;
+  line-height: 1.15;
+  text-wrap: balance;
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .page-title { font-size: 2.25rem; }
+}
+
+.page-subtitle {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 56rem;
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .page-subtitle { font-size: 16px; }
+}
+
+.page-divider {
+  height: 1px;
+  width: 6rem;
+  background: #e5e7eb;
+  margin: 1rem 0;
+}
+
+
+/* ── 7. Картки та анімації ──────────────────────────────────────────────── */
+.news-card,
+.vid-card,
+.person-card,
+.event-card,
+.doc-card,
+.exhibition-card,
+.year-card {
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.news-card,
+.doc-card { cursor: pointer; }
+
+.news-card:hover,
+.vid-card:hover,
+.doc-card:hover,
+.exhibition-card:hover,
+.year-card:hover {
+  box-shadow: 0 6px 24px rgba(30,58,138,.1);
+  transform: translateY(-2px);
+}
+.person-card:hover {
+  box-shadow: 0 12px 30px rgba(26,35,126,.08);
+  transform: translateY(-4px);
+}
+.event-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,.06);
+  transform: translateY(-2px);
+}
+
+.res-logo { transition: border-color .2s, box-shadow .2s; }
+
+.doc-card li.group:hover span {
+  text-decoration: underline;
+  text-decoration-color: #374151;
+  text-underline-offset: 2px;
+}
+.doc-card:hover h2 {
+  text-decoration: underline;
+  text-decoration-color: #1f2937;
+  text-underline-offset: 2px;
+}
+
+
+/* ── 8. Кнопки "Читати далі" ────────────────────────────────────────────── */
+.btn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1.5px solid #1A237E;
+  color: #1A237E;
+  padding: 7px 16px;
+  border-radius: 4px;
+  transition: background .18s, color .18s;
+}
+.btn-more:hover,
+.news-card:hover .btn-more {
+  background: #1A237E;
+  color: #fff;
+}
+
+
+/* ── 9. Skeleton завантаження ──────────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+@keyframes loading {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+/* ── 10. Sticky-зміст (TOC) ─────────────────────────────────────────────── */
+.toc a { color: #374151; text-decoration: none; }
+.toc a:hover {
+  color: #111827;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.toc-sticky { position: sticky; top: 148px; }
+.toc-scroll {
+  max-height: calc(100vh - 220px);
+  overflow: auto;
+}
+
+.toc-panel { transition: opacity .2s ease, transform .2s ease; }
+
+.toc-collapsed .toc-list { display: none; }
+.toc-toggle svg { transition: transform .2s ease; }
+.toc-collapsed .toc-toggle svg { transform: rotate(-90deg); }
+
+.toc-hidden .toc-panel {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+
+/* ── 11. Lightbox для галерей ─────────────────────────────────────────── */
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.93);
+  z-index: 10000;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lb-overlay.lb-active { display: flex; }
+
+.lb-stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 60px 60px 20px;
+  overflow: hidden;
+}
+.lb-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+.lb-close, .lb-prev, .lb-next {
+  position: absolute;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .15s ease, transform .15s ease;
+  z-index: 10001;
+}
+.lb-close:hover, .lb-prev:hover, .lb-next:hover {
+  background: rgba(255,255,255,.25);
+  transform: scale(1.05);
+}
+
+.lb-close { top: 16px; right: 16px; }
+.lb-prev  { left: 16px; top: 50%; transform: translateY(-50%); }
+.lb-next  { right: 16px; top: 50%; transform: translateY(-50%); }
+.lb-prev:hover { transform: translateY(-50%) scale(1.05); }
+.lb-next:hover { transform: translateY(-50%) scale(1.05); }
+
+.lb-bottom {
+  padding: 16px 60px 24px;
+  text-align: center;
+  color: #d1d5db;
+  width: 100%;
+  max-width: 800px;
+}
+.lb-counter {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+.lb-caption {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .lb-stage { padding: 60px 12px 12px; }
+  .lb-bottom { padding: 12px 12px 16px; }
+  .lb-prev, .lb-next { width: 38px; height: 38px; }
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
+}
